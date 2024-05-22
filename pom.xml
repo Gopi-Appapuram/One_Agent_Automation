@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>One_Agent_Automation</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <!-- Dependency Versions -->
+        <cucumber-java.version>7.17.0</cucumber-java.version>
+        <cucumber-testng.version>7.17.0</cucumber-testng.version>
+        <cucumber-Junit.version>7.17.0</cucumber-Junit.version>
+        <testng.version>7.10.2</testng.version>
+        <selenium-java.version>4.20.0</selenium-java.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+
+<!--        <extentreports-cucumber6-adapter.version>2.8.0</extentreports-cucumber6-adapter.version>-->
+        <poi.version>4.1.2</poi.version>
+        <poi-ooxml.version>4.1.2</poi-ooxml.version>
+        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+        <webdrivermanager.version>5.8.0</webdrivermanager.version>
+        <extentreports.version>5.1.1</extentreports.version>
+        <extentreports-cucumber7-adapter.version>1.14.0</extentreports-cucumber7-adapter.version>
+        <!-- End of Dependency Versions -->
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- Web Driver Manager Dependencies -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
+
+        <!-- Cucumber Dependencies -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber-testng.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber-Junit.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- TestNG Dependency -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Selenium Dependency -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium-java.version}</version>
+        </dependency>
+
+        <!-- Extent Reports Dependency -->
+        <!--        <dependency>
+                    <groupId>tech.grasshopper</groupId>
+                    <artifactId>extentreports-cucumber6-adapter</artifactId>
+                    <version>${extentreports-cucumber6-adapter.version}</version>
+                    <scope>test</scope>
+                </dependency>-->
+
+        <!-- Apache POI Dependencies -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi-ooxml.version}</version>
+        </dependency>
+
+        <!--Extent Reports Dependencies-->
+
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentreports.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>${extentreports-cucumber7-adapter.version}</version>
+
+        </dependency>
+        <dependency>
+            <groupId>org.zeroturnaround</groupId>
+            <artifactId>zt-zip</artifactId>
+            <version>1.17</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.12.0</version>
+
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
